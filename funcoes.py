@@ -59,6 +59,7 @@ def calcula_pontos_sequencia_baixa(lista):
     
     return 0
 
+#7
 def calcula_pontos_sequencia_alta(lista):
     lista2 = sorted(set(lista))
     i = 0
@@ -70,4 +71,19 @@ def calcula_pontos_sequencia_alta(lista):
         else:
             i = 0
     
+    return 0
+
+#8
+def calcula_pontos_full_house(lista):
+    contagen = []
+    vistos = []
+    for n in lista:
+        if n not in vistos:
+            contagen.append(lista.count(n))
+            vistos.append(n)
+    if 2 in contagen and 3 in contagen:
+        soma = 0
+        for i in lista:
+            soma += i
+        return soma
     return 0
