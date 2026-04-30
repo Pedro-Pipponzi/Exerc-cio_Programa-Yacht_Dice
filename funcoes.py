@@ -126,3 +126,15 @@ def calcula_pontos_regra_avancada(lista):
     
     return dicio
 
+#12
+def faz_jogada(dados, categoria, cartela):
+    if categoria in cartela['regra_avancada']:
+        resultado = calcula_pontos_regra_avancada(dados)
+        cartela['regra_avancada'][categoria] = resultado[categoria]
+        return cartela
+    
+    else:
+        categoria = int(categoria)
+        resultado = calcula_pontos_regra_simples(dados)
+        cartela['regra_simples'][categoria] = resultado[categoria]
+    return cartela
