@@ -58,3 +58,16 @@ def calcula_pontos_sequencia_baixa(lista):
             i = 0
     
     return 0
+
+def calcula_pontos_sequencia_alta(lista):
+    lista2 = sorted(set(lista))
+    i = 0
+    for j in range(1, len(lista2)):
+        if lista2[j] == lista2[j-1] + 1:
+            i += 1
+            if i >= 4:
+                return 30
+        else:
+            i = 0
+    
+    return 0
