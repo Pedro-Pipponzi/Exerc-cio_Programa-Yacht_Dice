@@ -33,3 +33,9 @@ def calcula_pontos_regra_simples(lista):
                 pontos += face
         dicio[face] = pontos
     return dicio
+
+def calcula_pontos_soma(lista):
+    pontuacao = 0
+    for dado in lista:
+        pontuacao += dado
+    return pontuacao
