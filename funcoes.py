@@ -101,3 +101,14 @@ def calcula_pontos_quadra(lista):
                 soma += dado
             return soma
     return 0
+
+#10
+def calcula_pontos_quina (lista):
+    for face in range(1, 7):
+        contagem = 0
+        for dado in lista:
+            if dado == face:
+                contagem += 1
+        if contagem >= 5:
+            return 50
+    return 0
