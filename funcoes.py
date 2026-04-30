@@ -87,3 +87,17 @@ def calcula_pontos_full_house(lista):
             soma += i
         return soma
     return 0
+
+#9
+def calcula_pontos_quadra(lista):
+    soma = 0
+    for face in range(1, 7):
+        contagem = 0
+        for dado in lista:
+            if dado == face:
+                contagem += 1
+        if contagem >= 4:
+            for dado in lista:
+                soma += dado
+            return soma
+    return 0
